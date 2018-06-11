@@ -1,5 +1,5 @@
 
-/*
+/* XXX While loop
 function randomNumber(upper) {
   return Math.floor( Math.random() * upper ) + 1;
 }
@@ -29,7 +29,7 @@ while (guess !== randomNumber) {
 }
 document.write('<p>The random number was: ' + randomNumber + '</p>');
 document.write('<p> It took the computer ' + attempts  + ' attempts to get it right</p>');
-*/
+
 
 // Do while loop for guessing numbers
 var randomNumberTwo = getRandomNumberTwo(10);
@@ -52,3 +52,15 @@ do {
   document.write ('<h2> You guess the number!</h2>');
   document.write('It took you ' + guessCount + ' tries to guess the number .' + randomNumberTwo);
 }
+
+// Note even if the do while loop is false it will run at least once. meaning the do and the while will run one time.
+
+*/
+
+// For loop
+var html = '';
+
+for(var i = 1; i <= 10; i += 1) {
+  html += '<div>' + i + '</div>';
+}
+document.write(html);
