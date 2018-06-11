@@ -1,4 +1,5 @@
 
+/*
 function randomNumber(upper) {
   return Math.floor( Math.random() * upper ) + 1;
 }
@@ -28,3 +29,26 @@ while (guess !== randomNumber) {
 }
 document.write('<p>The random number was: ' + randomNumber + '</p>');
 document.write('<p> It took the computer ' + attempts  + ' attempts to get it right</p>');
+*/
+
+// Do while loop for guessing numbers
+var randomNumberTwo = getRandomNumberTwo(10);
+var guess;
+var guessCount = 0;
+var correctGuess = false;
+
+function getRandomNumberTwo(upper) {
+  return Math.floor( Math.random() * upper ) + 1;
+}
+
+do {
+  guess = prompt ('I am thinking of a number number between 1 and 10. What is it?!');
+  guessCount += 1;
+  if(parseInt(guess) === randomNumberTwo) {
+    correctGuess = true;
+  }
+} while (! correctGuess) {
+  document.write ('<h2><strong>Do While</strong></h2>')
+  document.write ('<h2> You guess the number!</h2>');
+  document.write('It took you ' + guessCount + ' tries to guess the number .' + randomNumberTwo);
+}
